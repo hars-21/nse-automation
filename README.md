@@ -59,8 +59,50 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
+### 4. Prepare Your PostgreSQL Database
 
-## 4. Run the Script
+Create a table matching the CSV structure. For example:
+
+```sql
+CREATE TABLE IF NOT EXISTS report(
+TradDt DATE,
+BizDt DATE,
+Sgmt VARCHAR(20),
+Src VARCHAR(20),
+FinInstrmTp VARCHAR(20),
+FinInstrmId INT,
+ISIN VARCHAR(20),
+TckrSymb VARCHAR(20),
+SctySrs VARCHAR(20),
+XpryDt DATE,
+FininstrmActlXpryDt DATE,
+StrkPric FLOAT,
+OptnTp VARCHAR(20),
+FinInstrmNm VARCHAR(50),
+OpnPric FLOAT,
+HghPric FLOAT,
+LwPric FLOAT,
+ClsPric FLOAT,
+LastPric FLOAT,
+PrvsClsgPric FLOAT,
+UndrlygPric FLOAT,
+SttlmPric FLOAT,
+OpnIntrst VARCHAR(20),
+ChngInOpnIntrst VARCHAR(20),
+TtlTradgVol INT,
+TtlTrfVal FLOAT,
+TtlNbOfTxsExctd INT,
+SsnId VARCHAR(20),
+NewBrdLotQty INT,
+Rmks VARCHAR(20),
+Rsvd1 VARCHAR(20),
+Rsvd2 VARCHAR(20),
+Rsvd3 VARCHAR(20),
+Rsvd4 VARCHAR(20),
+id SERIAL PRIMARY KEY);
+```
+
+## 5. Run the Script
 
 ```bash
 python main.py
