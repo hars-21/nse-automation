@@ -52,11 +52,7 @@ pip install selenium requests pandas numpy psycopg2-binary
 #### Create `.env` file (do **not** push this to GitHub):
 
 ```env
-DB_NAME=your_db_name
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_PORT=5432
+DB_URL='your_db_url'
 ```
 
 ### 4. Prepare Your PostgreSQL Database
@@ -121,10 +117,14 @@ This will:
 ## 🧪 Sample Log Output
 
 ```
-[INFO] File downloaded as cm30JUL2025bhav.csv.zip
+[INFO] File downloaded as BhavCopy_NSE_CM_0_0_0_20250730_F_0000.csv.zip
+[INFO] File Extracted as BhavCopy_NSE_CM_0_0_0_20250730_F_0000.csv
+[SUCCESS] Connected to DB
+[INFO] Updating DB...
 [SUCCESS] Database updated successfully!
-[INFO] File 'cm30JUL2025bhav.csv' deleted.
-[INFO] File 'cm30JUL2025bhav.csv.zip' deleted.
+[INFO] File './BhavCopy_NSE_CM_0_0_0_20250730_F_0000.csv' deleted.
+[INFO] File './BhavCopy_NSE_CM_0_0_0_20250730_F_0000.csv.zip' deleted.
+
 ```
 
 
